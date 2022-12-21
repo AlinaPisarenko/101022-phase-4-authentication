@@ -20,12 +20,12 @@ function App() {
     })
   }, [])
 
-  const handleLogout = () => {
-    setUser({})
-    fetch('/logout', {
-      method: 'DELETE'
-    })
-  }
+  // const handleLogout = () => {
+  //   setUser({})
+  //   fetch('/logout', {
+  //     method: 'DELETE'
+  //   })
+  // }
 
   return (
     <div className="App">
