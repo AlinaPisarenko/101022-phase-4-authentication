@@ -6,12 +6,13 @@ class SessionsController < ApplicationController
             session[:user_id] = user.id
             render json: user 
         else
-            render json: {errors: "Username or password is invalid"}, status: 416
+            render json: {errors: "Username or password is invalid"}, status: 403
         end
     end
 
     def destroy
-
+        session.delete :user_id
+        render json: {message: "You've been logged out. Bye!"}
     end
 
 end
